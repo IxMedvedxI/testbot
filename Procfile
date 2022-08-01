@@ -1,1 +1,1 @@
-worker: python telbot.py $PORT
+worker: python main.py $PORT
