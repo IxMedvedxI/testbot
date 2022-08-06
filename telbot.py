@@ -27,7 +27,7 @@ def message_reply(message):
       quotes = soup.find_all('span',class_='text')
       rd = random.choice(quotes).text
       result = translator.translate(rd,dest = 'ru')
-      bot.send_message(message.chat.id,"Не Нажимай")
+      bot.send_message(message.chat.id,result.text)
 
 
 bot.infinity_polling()
