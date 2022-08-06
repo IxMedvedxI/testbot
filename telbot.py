@@ -15,7 +15,7 @@ def start_message(message):
   markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
   item1=types.KeyboardButton("Нажми")
   markup.add(item1)
-  bot.send_message(message.chat.id,'Привет',reply_markup=markup)
+  bot.send_message(message.chat.id,'Пока',reply_markup=markup)
 
 @bot.message_handler(content_types='text')
 def message_reply(message):
