@@ -10,12 +10,11 @@ def fun(st):
   y = "яЯ"
   st.split()
   sting =''
-  if y[0] in st or y[1] in st:
-    for i in range(len(st)):
-      if st[i] == y[0] or st[i] == y[1]:
-        sting += 'ты'
-      else:
-        sting += st[i] 
+   for i in range(len(st)):
+    if st[i] == y[0] or st[i] == y[1]:
+       sting += 'ты'
+    else:
+       sting += st[i] 
   return sting
 
 token ='5413641390:AAEcZAElsbwbWXkO6e8Fhwj6RFAHNB2892c'
