@@ -29,7 +29,7 @@ def message_reply(message):
       result = translator.translate(rd,dest = 'ru')
       bot.send_message(message.chat.id,result.text)
     else:
-      bot.send_message(message.chat.id,result.text)
+      bot.send_message(message.chat.id,"bug")
 
 
 bot.infinity_polling()
