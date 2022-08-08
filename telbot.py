@@ -28,6 +28,8 @@ def message_reply(message):
       rd = random.choice(quotes).text
       result = translator.translate(rd,dest = 'ru')
       bot.send_message(message.chat.id,result.text)
+    else:
+      bot.send_message()
 
 
 bot.infinity_polling()
