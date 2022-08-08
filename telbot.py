@@ -30,6 +30,7 @@ def message_reply(message):
       bot.send_message(message.chat.id,result.text)
     else:
       bot.send_message(message.chat.id,"bug")
+      markup.add(item1)
 
 
 bot.infinity_polling()
