@@ -5,11 +5,6 @@ from bs4 import BeautifulSoup
 import random
 from googletrans import Translator, constants
 
-mas = ['a','b']
-mas[0] = 'b'
-print(mas)
-
-
 def fun(st):
   str(st)
   y = "яЯ"
@@ -17,8 +12,10 @@ def fun(st):
   if y[0] in st or y[1] in st:
     for i in range(len(st)):
       if st[i] == y[0] or st[i] == y[1]:
-        st[i] = 'ты' 
-  return st
+        st[i] = 'ты'
+    for i in range(len(st)):
+      sting += st[t] 
+  return sting
 
 token ='5413641390:AAEcZAElsbwbWXkO6e8Fhwj6RFAHNB2892c'
 bot = telebot.TeleBot(token)
