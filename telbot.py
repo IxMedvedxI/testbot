@@ -27,7 +27,7 @@ def message_reply(message):
       quotes = soup.find_all('span',class_='text')
       rd = random.choice(quotes).text
       result = translator.translate(rd,dest = 'ru')
-      bot.send_message(message.chat.id,result.text,,reply_markup=markup)
+      bot.send_message(message.chat.id,result.text,reply_markup=markup)
     else:
       markup.add(item1)
       bot.send_message(message.chat.id,"bug",reply_markup=markup)
