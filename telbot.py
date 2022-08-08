@@ -25,13 +25,13 @@ translator = Translator()
 def start_message(message):
   #bot.send_message(message.chat.id,"Привет")
   markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
-  item1=types.KeyboardButton("Нажми")
+  item1=types.KeyboardButton("Не Нажимай")
   markup.add(item1)
   bot.send_message(message.chat.id,'Привет!',reply_markup=markup)
 
 @bot.message_handler(content_types='text')
 def message_reply(message):
-    if message.text=="Нажми":
+    if message.text=="Не Нажимай":
       rd = random.randint(1,10)
       url = "https://quotes.toscrape.com/page/"+str(rd)+"/"
       response = requests.get(url)
