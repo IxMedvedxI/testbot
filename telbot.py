@@ -5,11 +5,19 @@ from bs4 import BeautifulSoup
 import random
 from googletrans import Translator, constants
 
+mas = ['a','b']
+mas[0] = 'b'
+print(mas)
+
+
 def fun(st):
   str(st)
-  for i in range(1,len(st)-1):
-    if st[i-1] == ' ' and st[i+1] == ' ' and (st[i] == 'я' or st[i] == 'Я'):
-      st = st[i:] + "ты" + st[i+1:]
+  y = "яЯ"
+  st.split()
+  if y[0] in st or y[1] in st:
+    for i in range(len(st)):
+      if st[i] == y[0] or st[i] == y[1]:
+        st[i] = 'ты' 
   return st
 
 token ='5413641390:AAEcZAElsbwbWXkO6e8Fhwj6RFAHNB2892c'
