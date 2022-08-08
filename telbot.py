@@ -5,6 +5,13 @@ from bs4 import BeautifulSoup
 import random
 from googletrans import Translator, constants
 
+def fun(st):
+  str(st)
+  for i in range(1,len(st)-1):
+    if st[i-1] == ' ' and st[i+1] == ' ' and (st[i] == 'я' or st[i] == 'Я'):
+      st = st[i:] + "ты" + st[i+1:]
+  return st
+
 token ='5413641390:AAEcZAElsbwbWXkO6e8Fhwj6RFAHNB2892c'
 bot = telebot.TeleBot(token)
 translator = Translator()
@@ -29,7 +36,7 @@ def message_reply(message):
       result = translator.translate(rd,dest = 'ru')
       bot.send_message(message.chat.id,result.text)
     else:
-      bot.send_message(message.chat.id,"bug")
+      bot.send_message(message.chat.id,fun(message.text))
 
 
 bot.infinity_polling()
