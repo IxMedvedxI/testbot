@@ -19,6 +19,9 @@ def start_message(message):
 
 @bot.message_handler(content_types='text')
 def message_reply(message):
+  markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
+  item1=types.KeyboardButton("Нажми")
+  markup.add(item1)
     if message.text=="Нажми":
       rd = random.randint(1,10)
       url = "https://quotes.toscrape.com/page/"+str(rd)+"/"
@@ -29,7 +32,6 @@ def message_reply(message):
       result = translator.translate(rd,dest = 'ru')
       bot.send_message(message.chat.id,result.text,reply_markup=markup)
     else:
-      markup.add(item1)
       bot.send_message(message.chat.id,"bug",reply_markup=markup)
 
 
